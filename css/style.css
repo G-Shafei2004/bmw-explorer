@@ -1,0 +1,247 @@
+/* =========================================
+   BMW Explorer - style.css
+   Colors used (3-4 colors, 3 different formats):
+   - BMW Blue:      #0066b1  (hex)
+   - Dark Navy:     rgb(20, 26, 43)   (rgb)
+   - Light Gray:    hsl(0, 0%, 96%)   (hsl)
+   - White:         white             (name)
+   ========================================= */
+
+/* ---------- Base / element selectors ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif; /* font family #1 */
+  color: rgb(20, 26, 43);
+  background-color: white;
+  line-height: 1.6em; /* em unit */
+}
+
+h1, h2 {
+  font-family: "Georgia", serif; /* font family #2 - max 2 total */
+  font-weight: 700;
+  color: #0066b1;
+}
+
+h1 {
+  font-size: 2rem;   /* rem unit */
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  border-bottom: 2px solid #0066b1; /* border - box model */
+  padding-bottom: 8px;              /* padding - box model */
+}
+
+p {
+  font-size: 1rem;
+  max-width: 800px;
+}
+
+img {
+  max-width: 90%;    /* percentage unit */
+  height: auto;
+  display: block;
+  margin: 16px auto; /* margin - box model */
+  border: 3px solid hsl(0, 0%, 96%);
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: rgb(20, 26, 43);
+  color: white;
+  padding: 24px 16px; /* px unit, padding - box model */
+  text-align: center;
+}
+
+.site-title {
+  font-family: "Georgia", serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  background-color: #0066b1;
+  min-height: 6vh; /* vh unit */
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin: 0;
+  padding: 12px 0;
+}
+
+nav a {
+  color: white;
+  text-decoration: none; /* removes underline */
+  font-weight: 600;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* hover effect that changes more than just color */
+nav a:hover {
+  background-color: rgb(20, 26, 43);
+  transform: translateY(-2px);
+}
+
+nav a.active {
+  border-bottom: 3px solid white;
+}
+
+/* ---------- Main content ---------- */
+main {
+  max-width: 900px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+ul, ol {
+  margin-bottom: 24px;
+}
+
+figure {
+  text-align: center;
+  margin: 24px 0;
+}
+
+figcaption {
+  font-style: italic;
+  color: rgb(20, 26, 43);
+  margin-top: 8px;
+}
+
+blockquote {
+  border-left: 4px solid #0066b1;
+  margin: 16px 0;
+  padding: 8px 16px;
+  background-color: hsl(0, 0%, 96%);
+  font-style: italic;
+}
+
+iframe {
+  display: block;
+  margin: 16px auto;
+  max-width: 100%;
+  border: none;
+}
+
+/* ---------- Table ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0 32px 0;
+}
+
+caption {
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+th, td {
+  border: 1px solid hsl(0, 0%, 96%);
+  padding: 10px 12px;
+  text-align: left;
+}
+
+thead {
+  background-color: #0066b1;
+  color: white;
+}
+
+/* readable alternating rows - class selector */
+tbody tr:nth-child(even) {
+  background-color: hsl(0, 0%, 96%);
+}
+
+tfoot {
+  font-style: italic;
+  background-color: rgb(20, 26, 43);
+  color: white;
+}
+
+/* ---------- Form ---------- */
+form {
+  max-width: 500px;
+}
+
+fieldset {
+  border: 1px solid #0066b1;
+  border-radius: 6px;
+  margin-bottom: 24px;
+  padding: 16px;
+}
+
+legend {
+  font-weight: 700;
+  color: #0066b1;
+  padding: 0 8px;
+}
+
+label {
+  display: block;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid rgb(20, 26, 43);
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+input[type="radio"], input[type="checkbox"] {
+  width: auto;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+/* visible focus state, required by the assignment */
+input:focus, select:focus, textarea:focus {
+  outline: 3px solid #0066b1;
+  outline-offset: 2px;
+}
+
+button {
+  margin-top: 16px;
+  background-color: #0066b1;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(20, 26, 43);
+}
+
+/* ID selector - used only once, on the unique submit button */
+#submit-btn {
+  display: block;
+  width: 100%;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: rgb(20, 26, 43);
+  color: white;
+  text-align: center;
+  padding: 16px;
+  margin-top: 32px;
+}

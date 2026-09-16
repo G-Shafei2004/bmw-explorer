@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMW Explorer - Compare Models & Contact</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header>
+    <p class="site-title">BMW Explorer</p>
+    <p>The Ultimate Driving Machine, explored.</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Compare Models & Book a Test Drive</h1>
+
+    <h2>BMW Model Comparison</h2>
+    <table>
+      <caption>Key specs for popular BMW models (2024 model year)</caption>
+      <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col">Engine</th>
+          <th scope="col">0-100 km/h</th>
+          <th scope="col">Horsepower</th>
+          <th scope="col">Starting Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>3 Series (330i)</td>
+          <td>2.0L Turbo Inline-4</td>
+          <td>5.8s</td>
+          <td>255 hp</td>
+          <td>$45,000</td>
+        </tr>
+        <tr>
+          <td>5 Series (530i)</td>
+          <td>2.0L Turbo Inline-4</td>
+          <td>5.9s</td>
+          <td>255 hp</td>
+          <td>$58,000</td>
+        </tr>
+        <tr>
+          <td>X5 (xDrive40i)</td>
+          <td>3.0L Turbo Inline-6</td>
+          <td>5.3s</td>
+          <td>375 hp</td>
+          <td>$65,000</td>
+        </tr>
+        <tr>
+          <td>M3 Competition</td>
+          <td>3.0L Twin-Turbo Inline-6</td>
+          <td>3.8s</td>
+          <td>503 hp</td>
+          <td>$78,000</td>
+        </tr>
+        <tr>
+          <td>i4 eDrive40</td>
+          <td>Electric Motor</td>
+          <td>5.7s</td>
+          <td>335 hp</td>
+          <td>$52,000</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">All prices are approximate starting MSRP</td>
+          <td>USD</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <h2>Book a Test Drive</h2>
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Your Details</legend>
+
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        <br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="+1 555 123 4567">
+        <br>
+
+        <label for="testdrive-date">Preferred Test Drive Date:</label>
+        <input type="date" id="testdrive-date" name="testdrive-date" min="2026-01-01">
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" min="18" max="99">
+        <br>
+
+        <label for="fav-color">Favorite Car Color:</label>
+        <input type="color" id="fav-color" name="fav-color" value="#0066b1">
+        <br>
+      </fieldset>
+
+      <fieldset>
+        <legend>Model & Preferences</legend>
+
+        <label for="model">Model you're interested in:</label>
+        <select id="model" name="model">
+          <option value="3-series">3 Series</option>
+          <option value="5-series">5 Series</option>
+          <option value="x5">X5</option>
+          <option value="m3">M3 Competition</option>
+          <option value="i4">i4</option>
+        </select>
+        <br>
+
+        <p>Preferred transmission:</p>
+        <input type="radio" id="manual" name="transmission" value="manual">
+        <label for="manual">Manual</label>
+
+        <input type="radio" id="automatic" name="transmission" value="automatic">
+        <label for="automatic">Automatic</label>
+        <br>
+
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+        <label for="newsletter">Subscribe me to the BMW newsletter</label>
+        <br>
+
+        <label for="message">Additional Message:</label>
+        <br>
+        <textarea id="message" name="message" rows="4" cols="40" maxlength="300" placeholder="Anything else we should know?"></textarea>
+      </fieldset>
+
+      <button type="submit" id="submit-btn">Request Test Drive</button>
+    </form>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 BMW Explorer. Created for Assignment 1 - HTML & CSS Basics.</p>
+  </footer>
+
+</body>
+</html>
